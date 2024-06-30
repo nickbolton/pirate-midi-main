@@ -22,7 +22,7 @@ void printLoop() {
 
 void loop() {
   printLoop();
-  PETAL_INTEROP->processLoop();
+  PETAL->processLoop();
 }
 
 void midi_SendPetalSysEx(const uint8_t* data, size_t size) {
