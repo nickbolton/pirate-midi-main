@@ -53,7 +53,7 @@ void midi_AssignPetalSysemExclusiveCallback(void (callback)(uint8_t* array, unsi
 
 }
 
-void pirate_registerHeatbeatPayloadProvider(HeartbeatPayloadProvider (callback)(uint8_t* array, unsigned size)) {
+void pirate_registerHeatbeatPayloadProvider(HeartbeatPayloadProvider (callback)()) {
 
 }
 
