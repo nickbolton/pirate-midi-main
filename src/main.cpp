@@ -6,6 +6,12 @@ unsigned long loopCount = 0;
 
 PETAL_CREATE_INSTANCE;
 
+struct HeartbeatPayloadProvider {
+  byte type;
+  uint16_t length;
+  void *payload;
+};
+
 void setup() {
   Serial.begin(115200);
   delay(2000);
@@ -44,6 +50,10 @@ void midi_AssignPetalProgramChangeCallback(void (callback)(uint8_t channel, uint
 }
 
 void midi_AssignPetalSysemExclusiveCallback(void (callback)(uint8_t* array, unsigned size)) {
+
+}
+
+void pirate_registerHeatbeatPayloadProvider(HeartbeatPayloadProvider (callback)(uint8_t* array, unsigned size)) {
 
 }
 
